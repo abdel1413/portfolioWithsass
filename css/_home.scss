@@ -1,0 +1,32 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+  border: 1px solid red;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  //flex-wrap: wrap;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("../img/img5.jpeg") center top;
+  background-size: cover;
+  //width: 30vw;
+  resize: both;
+  // height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  &-first {
+    font-size: 5rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $text-color;
+  }
+  &--last {
+    color: $secondary-color;
+  }
+}
