@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./config";
 @import "./home";
+@import "./menu";
 
 body {
   background-color: $primary-color;
@@ -22,7 +23,7 @@ header {
   left: 0;
   padding: 1rem;
   width: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 h1,
@@ -32,13 +33,15 @@ h3 {
 }
 
 main {
-  margin-top: 150px;
+  //margin-top: 150px;
   height: 100%;
   width: 100%;
 
   .social-icons {
     //border: 1px solid red;
     position: fixed;
+    z-index: 2;
+
     bottom: 1rem;
     left: 1rem;
 
@@ -56,8 +59,9 @@ main {
 }
 footer {
   position: fixed;
-  bottom: 0.4rem;
+  bottom: 1rem;
   right: 1rem;
   font-size: 1rem;
+  z-index: 2;
   color: set-text-color($primary-color);
 }

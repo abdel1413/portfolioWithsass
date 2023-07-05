@@ -29,12 +29,181 @@
 .home-first {
   font-size: 5rem;
   margin-top: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid #fff;
 }
 
 .home--last {
   color: #ff652f;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  width: 30px;
+  height: 35px;
+  cursor: pointer;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.menu-btn-burger {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 28px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.menu-btn-burger::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  top: -5px;
+  right: 0;
+  height: 2px;
+  width: 28px;
+  background-color: #fff;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.menu-btn-burger::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 2px;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.menu-btn-burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background-color: transparent;
+}
+
+.menu-btn-burger.open::before {
+  -webkit-transform: rotate(45deg) translate(1px, 5px);
+          transform: rotate(45deg) translate(1px, 5px);
+}
+
+.menu-btn-burger.open::after {
+  width: 28px;
+  -webkit-transform: rotate(-45deg) translate(6px, -3px);
+          transform: rotate(-45deg) translate(6px, -3px);
+}
+
+.nav {
+  border: 1px solid blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0.98;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  background-color: #272727;
+  padding-right: 1rem;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav .menu-nav-item {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.nav .menu-nav-item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav-item.active > a {
+  color: #fff;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.nav .menu-nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+.nav .menu-nav-link:hover {
+  color: #ff652f;
+}
+
+.menu-nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
 }
 
 body {
@@ -58,7 +227,6 @@ header {
   left: 0;
   padding: 1rem;
   width: 100%;
-  border: 1px solid red;
 }
 
 h1,
@@ -68,13 +236,13 @@ h3 {
 }
 
 main {
-  margin-top: 150px;
   height: 100%;
   width: 100%;
 }
 
 main .social-icons {
   position: fixed;
+  z-index: 2;
   bottom: 1rem;
   left: 1rem;
 }
@@ -93,9 +261,10 @@ main .social-icons a:hover {
 
 footer {
   position: fixed;
-  bottom: 0.4rem;
+  bottom: 1rem;
   right: 1rem;
   font-size: 1rem;
+  z-index: 2;
   color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */
