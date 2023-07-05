@@ -1,0 +1,39 @@
+@import "./variables";
+.about {
+  border: 2px solid red;
+  padding-bottom: 2rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__bio-image {
+    border: 2px solid green;
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/img8.jpeg") center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-fit: cover;
+    //overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    p {
+      margin: 0 300px;
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    margin-block-end: 2rem;
+  }
+}

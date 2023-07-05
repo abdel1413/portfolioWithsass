@@ -2,6 +2,7 @@
 @import "./config";
 @import "./home";
 @import "./menu";
+@import "./about";
 
 body {
   background-color: $primary-color;
@@ -41,7 +42,6 @@ main {
     //border: 1px solid red;
     position: fixed;
     z-index: 2;
-
     bottom: 1rem;
     left: 1rem;
 
@@ -64,4 +64,8 @@ footer {
   font-size: 1rem;
   z-index: 2;
   color: set-text-color($primary-color);
+}
+
+.text-secondary {
+  color: $secondary-color;
 }
