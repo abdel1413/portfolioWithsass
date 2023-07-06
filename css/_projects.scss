@@ -1,0 +1,131 @@
+@import "variables";
+.projects {
+  padding-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  //   height: 100vh;
+  //   width: 100%;
+  &-image {
+    height: 45vh;
+    width: 100vw;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/img3.jpeg") center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // object-fit: cover;
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    //  object-fit: cover;
+
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .text-secondary {
+    font-size: 2rem;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin: 1rem 300px;
+  }
+
+  &-container {
+    // border: red 3px solid;
+    margin: 1rem auto 0 auto;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    max-width: 1000px;
+    grid-gap: 2rem;
+    box-sizing: border-box;
+    object-fit: cover;
+  }
+
+  &-project {
+    position: relative;
+    overflow: hidden;
+    padding: 0 auto;
+    box-sizing: border-box;
+    object-fit: cover;
+    cursor: pointer;
+    //border: 1px solid blue;
+    margin: 0;
+    border-bottom: 5px solid $secondary-color;
+    .projects-btns {
+      visibility: hidden;
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      @include transition-ease;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.7;
+        background-color: $secondary-color;
+      }
+      .projects-btns {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  a > img {
+    display: block;
+  }
+
+  a .project-img {
+    height: calc(100% - 2.5rem);
+    width: 100%;
+    // border: 3px solid red;
+  }
+
+  &-btns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  &-btn {
+    margin-left: 2rem;
+    padding: 0;
+    //color: red;
+    color: set-text-color($secondary-color);
+    // color: set-text-color(set-text-color($secondary-color));
+
+    &:hover {
+      visibility: visible;
+      color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+}
