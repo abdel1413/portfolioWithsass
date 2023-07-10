@@ -3,3 +3,33 @@
   margin: 0;
   pad: 0;
 }
+
+@mixin transition-ease {
+  transition: all 0.9s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return $text-color;
+  }
+}
+
+@mixin media-medium {
+  @media screen and(min-width:768px) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xLarge {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

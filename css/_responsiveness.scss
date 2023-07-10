@@ -1,0 +1,112 @@
+@include media-medium {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      background-color: transparent;
+      //background-color: gray;
+      transform: translateY(0);
+      //border: 2px solid green;
+      height: 100%;
+      text-align: right;
+
+      &-item {
+        display: inline;
+        // padding-right: .5rem;
+      }
+      &-link {
+        display: inline-block;
+        font-size: 1.2rem;
+        margin: 1rem 0;
+
+        padding: 0.5rem;
+      }
+      &-link:hover {
+        //border: 1px solid gray;
+        @include transition-ease;
+      }
+    }
+  }
+  .projects {
+    &-container {
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 800px;
+    }
+
+    .text-secondary {
+      font-size: 2.5rem;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .about__bio {
+    font-size: 1.5rem;
+  }
+
+  .contacts {
+    border: 3px solid blue;
+    &__list {
+      // color: green;
+      // display: flex;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-large {
+  .projects {
+    &-container {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      max-width: 1000px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-sizing: border-box;
+    }
+    .text-secondary {
+      font-size: 3.5rem;
+    }
+  }
+
+  .contacts {
+    border: 3px solid blue;
+    &__list {
+      //color: green;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@include media-xLarge {
+  .projects {
+    &-container {
+      // grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-secondary {
+      font-size: 4.5rem;
+    }
+  }
+
+  .contacts {
+    border: 3px solid blue;
+    &__list {
+      color: green;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

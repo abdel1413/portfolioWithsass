@@ -1,12 +1,8 @@
 @import "variables";
 .projects {
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  //   height: 100vh;
-  //   width: 100%;
+
   &-image {
     height: 45vh;
     width: 100vw;
@@ -18,54 +14,68 @@
       url("../img/img3.jpeg") center top;
     background-size: contain;
     background-repeat: no-repeat;
-    // object-fit: cover;
-    //background-size: cover;
-    //background-repeat: no-repeat;
-    //  object-fit: cover;
 
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
+    p {
+      text-align: center;
+      margin: 1rem 300px;
+    }
+  }
+
+  &__technoligies_used {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //  border: green 3px solid;
+    padding: 0;
+
+    p {
+      width: 100%;
+    }
   }
 
   .text-secondary {
     font-size: 2rem;
     text-align: center;
   }
-  p {
-    text-align: center;
-    margin: 1rem 300px;
-  }
 
   &-container {
+    margin: auto;
     // border: red 3px solid;
-    margin: 1rem auto 0 auto;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
+    width: 60vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    max-width: 1000px;
+    grid-template-columns: 1fr;
     grid-gap: 2rem;
-    box-sizing: border-box;
-    object-fit: cover;
+    margin: 2rem auto 0 auto;
   }
 
   &-project {
     position: relative;
     overflow: hidden;
-    padding: 0 auto;
-    box-sizing: border-box;
-    object-fit: cover;
     cursor: pointer;
-    //border: 1px solid blue;
-    margin: 0;
+    // border: 1px solid blue;
+
     border-bottom: 5px solid $secondary-color;
+
+    .project-item {
+      // border: green solid 3px;
+    }
+
     .projects-btns {
       visibility: hidden;
       opacity: 1;
+    }
+
+    img {
+      // height: 100%;
+      width: 100%;
+      // border: green solid 3px;
     }
 
     &::after {
@@ -77,6 +87,7 @@
       left: 0;
       opacity: 0;
       @include transition-ease;
+      overflow: hidden;
     }
     &:hover {
       &::after {
@@ -126,6 +137,40 @@
     &:hover {
       visibility: visible;
       color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  footer {
+    transform: rotate(90deg) translate(-3rem, -1rem);
+    margin-bottom: 1rem;
+  }
+
+  .see-all-projects {
+    // background-color: $primary-color;
+    // border: 3px solid $primary-color;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    cursor: pointer;
+    //padding: 0.5rem;
+
+    button {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    button:hover {
+      background-color: $secondary-color;
+      @include transition-ease;
+      color: set-text-color($primary-color);
+      border: 1px solid $secondary-color;
     }
   }
 }
