@@ -231,6 +231,7 @@
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,6 +264,7 @@
 }
 
 .about .jobs {
+  height: 50vh;
   padding: 0 5rem;
   margin-right: auto;
   margin: 1rem auto;
@@ -277,6 +279,8 @@
   background-color: #414141;
   border-bottom: 5px solid #ff652f;
   padding: 0.5rem;
+  text-align: center;
+  padding: 0 auto;
 }
 
 .about .jobs h2,
