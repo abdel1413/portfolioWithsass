@@ -37,7 +37,6 @@
 }
 
 .menu-btn {
-  border: 2px solid blue;
   position: absolute;
   z-index: 1;
   right: 2.5rem;
@@ -104,7 +103,6 @@
 }
 
 .nav {
-  border: 4px solid #272727;
   position: fixed;
   top: 0;
   left: 0;
@@ -515,7 +513,6 @@
 }
 
 .contacts {
-  border: 2px solid red;
   padding-bottom: 2rem;
   height: 100vh;
   width: 100%;
@@ -608,9 +605,6 @@ footer {
   .about__bio {
     font-size: 1.5rem;
   }
-  .contacts {
-    border: 3px solid blue;
-  }
   .contacts__list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -634,9 +628,6 @@ footer {
   .projects .text-secondary {
     font-size: 3.5rem;
   }
-  .contacts {
-    border: 3px solid blue;
-  }
   .contacts__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -655,9 +646,6 @@ footer {
   }
   .projects .text-secondary {
     font-size: 4.5rem;
-  }
-  .contacts {
-    border: 3px solid blue;
   }
   .contacts__list {
     color: green;
@@ -703,10 +691,6 @@ h3 {
 main {
   height: 100%;
   width: 100%;
-}
-
-main .menu-nav {
-  background-color: red;
 }
 
 main .social-icons {
