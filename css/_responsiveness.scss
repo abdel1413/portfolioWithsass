@@ -44,8 +44,9 @@
     }
   }
   .about {
-    .about__bio {
-      font-size: 1.5rem;
+    .about__bio__image__text {
+      font-size: 1.2rem;
+      font-weight: initial;
     }
 
     .jobs {
@@ -90,12 +91,17 @@
   }
   .about {
     &__bio__image__text {
-      font-size: 2rem;
+      font-size: 1.5rem;
 
       p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-right: 0;
         text-align: initial;
+        font-weight: 0.5;
+        //color: lighten($secondary-color, 0.9);
+        // &:hover {
+        //   color: set-text-color($secondary-color);
+        // }
       }
     }
 
@@ -103,8 +109,11 @@
       padding: 0 10rem;
       // background-color: blue;
       &-job {
-        font-size: (1.3rem);
+        font-size: (1.2rem);
         font-family: Arial, Helvetica, sans-serif;
+        // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        //   "Lucida Sans", Arial, sans-serif;
+        font-family: monospace;
       }
     }
   }

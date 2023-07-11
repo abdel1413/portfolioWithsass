@@ -605,8 +605,9 @@ footer {
   .projects a {
     cursor: pointer;
   }
-  .about .about__bio {
-    font-size: 1.5rem;
+  .about .about__bio__image__text {
+    font-size: 1.2rem;
+    font-weight: initial;
   }
   .about .jobs {
     padding: 0 7rem;
@@ -648,19 +649,21 @@ footer {
             flex-direction: row;
   }
   .about__bio__image__text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .about__bio__image__text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-right: 0;
     text-align: initial;
+    font-weight: 0.5;
   }
   .about .jobs {
     padding: 0 10rem;
   }
   .about .jobs-job {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
   }
 }
 
