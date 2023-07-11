@@ -19,8 +19,8 @@
         rgba($primary-color, 0.9),
         rgba($primary-color, 0.3)
       ),
-      url("../img/img8.jpeg") center top;
-    background-size: contain;
+      url("../img/img5.jpeg") center top;
+    background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
 
@@ -50,12 +50,12 @@
     }
   }
   .jobs {
-    height: 50vh;
-    //border: 2px solid red;
+    height: 40vh;
+
     padding: 0 5rem;
-    margin-right: auto;
+    //margin-right: auto;
     //height: 60vh;
-    margin: 1rem auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;

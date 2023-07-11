@@ -43,9 +43,19 @@
       cursor: pointer;
     }
   }
+  .about {
+    .about__bio {
+      font-size: 1.5rem;
+    }
 
-  .about__bio {
-    font-size: 1.5rem;
+    .jobs {
+      padding: 0 7rem;
+      // background-color: blue;
+      &-job {
+        font-size: (1rem);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
   }
 
   .contacts {
@@ -78,6 +88,26 @@
       flex-direction: row;
     }
   }
+  .about {
+    &__bio__image__text {
+      font-size: 2rem;
+
+      p {
+        font-size: 1.5rem;
+        margin-right: 0;
+        text-align: initial;
+      }
+    }
+
+    .jobs {
+      padding: 0 10rem;
+      // background-color: blue;
+      &-job {
+        font-size: (1.3rem);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
 }
 
 @include media-xLarge {
@@ -94,9 +124,13 @@
 
   .contacts {
     &__list {
-      color: green;
+      //color: green;
       display: flex;
       flex-direction: row;
     }
+  }
+  .jobs {
+    padding: 0 10rem;
+    //background-color: blue;
   }
 }

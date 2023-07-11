@@ -4,15 +4,15 @@
   width: 100%;
 
   &-image {
-    height: 45vh;
+    height: 50vh;
     width: 100vw;
     background: linear-gradient(
         to right,
         rgba($primary-color, 0.9),
         rgba($primary-color, 0.3)
       ),
-      url("../img/img3.jpeg") center top;
-    background-size: contain;
+      url("../img/img5.jpeg") center top;
+    background-size: cover;
     background-repeat: no-repeat;
 
     display: flex;
@@ -32,7 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //  border: green 3px solid;
+
     padding: 0;
 
     p {
@@ -46,8 +46,8 @@
   }
 
   &-container {
-    margin: auto;
-    // border: red 3px solid;
+    margin: 0;
+    //border: red 3px solid;
     width: 60vw;
     display: grid;
     grid-template-columns: 1fr;
